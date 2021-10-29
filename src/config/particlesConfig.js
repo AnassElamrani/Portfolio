@@ -1,14 +1,14 @@
 const particlesConfig = {
   "particles": {
     "number": {
-      "value": 71,
+      "value": 31,
       "density": {
         "enable": true,
         "value_area": 631.3280775270874
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#6fa8dc"
     },
     "shape": {
       "type": "circle",
@@ -22,7 +22,7 @@ const particlesConfig = {
       "image": {
         "src": "img/github.svg",
         "width": 100,
-        "height": 100
+        "height": 10
       }
     },
     "opacity": {
@@ -48,7 +48,7 @@ const particlesConfig = {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#6fa8dc",
       "opacity": 0.4,
       "width": 1
     },
@@ -71,8 +71,8 @@ const particlesConfig = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "bubble"
+        "enable": true,
+        "mode": "grab"
       },
       "onclick": {
         "enable": true,
@@ -82,7 +82,7 @@ const particlesConfig = {
     },
     "modes": {
       "grab": {
-        "distance": 400,
+        "distance": 200,
         "line_linked": {
           "opacity": 1
         }

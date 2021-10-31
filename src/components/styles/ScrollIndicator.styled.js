@@ -16,7 +16,7 @@ const StyledScrollIndicator = styled.div`
 #borders {
   width: 30px;
   height: 80px;
-  border: 1px solid #ba92c2;
+  border: 1px solid #ff5722;
   border-radius: 40px;
   position: relative;
 }

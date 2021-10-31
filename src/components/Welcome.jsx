@@ -20,7 +20,12 @@ transform: translate(-50%, -50%);
 display: flex;
 flex-direction: column;
 align-items: center;
-font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Libre Baskerville', serif;
+`
+const HelloTitle = styled.h2`
+color:#ff5722;
+font-family: monospace
+
 `
 
 export default function StyledWelcome() {
@@ -32,11 +37,11 @@ export default function StyledWelcome() {
     return (
     <Welcome className="welcome">
         <Test><Particles className="particles" height='100vh' style={{height: '80vh'}} params={particlesConfig} /></Test>
-            <Typist avgTypingDelay={100}>
+            <Typist avgTypingDelay={60}>
         <Title>
-            <h3>Hello !</h3>
-            <h2 style={{color:"#FFDA53", fontFamily: "'Roboto Condensed', sans-serif"}}>I am Anass Elamrani</h2>
-            <h1>Full Stack Developer .</h1> 
+            <HelloTitle>Hello there !</HelloTitle>
+            <h1>I am Anass Elamrani</h1>
+            <h1>I am a Full Stack Developer .</h1> 
           {/* <Typist.Backspace count={20} delay={800} /> */}
         </Title>
         </Typist>

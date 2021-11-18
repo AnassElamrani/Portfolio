@@ -16,7 +16,7 @@ const StyledScrollIndicator = styled.div`
 #borders {
   width: 30px;
   height: 80px;
-  border: 1px solid #ff5722;
+  border: 1px solid white;
   border-radius: 40px;
   position: relative;
 }
@@ -36,10 +36,10 @@ const StyledScrollIndicator = styled.div`
 #arrow {
   width: 15px;
   height: 15px;
-  border: solid white;
+  border: solid #09f755;
   border-width: 4px 4px 0 0;
   left: 50%;
-  top: 100%;
+  top: 110%;
   position: absolute;
   transform-origin: left;
   transform: rotate(135deg) translate(-50%, 0);

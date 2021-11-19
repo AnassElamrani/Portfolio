@@ -10,15 +10,17 @@ export default function Navbar() {
         console.log('target', e.target.className);
         if(document.getElementById(e.target.className))
             document.getElementById(e.target.className).scrollIntoView({behavior: 'smooth'});
+        else 
+            console.log('could not find the component');
     }
 
     return (
         <StyledNavbar>
             <Logo>AE</Logo>
             <RightGroup>
-            <div class="about" onClick={scrollIntoView}>About</div>
-            <div class="projects" onClick={scrollIntoView}>Projects</div>
-            <GetInTouchButton class="contact" onClick={scrollIntoView}>
+            <div className="about" onClick={scrollIntoView}>About</div>
+            <div className="projects" onClick={scrollIntoView}>Projects</div>
+            <GetInTouchButton className="contact" onClick={scrollIntoView}>
                 Get in touch
             </GetInTouchButton>
             </RightGroup>

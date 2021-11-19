@@ -21,7 +21,7 @@ transform: translate(-50%, -50%);
 display: flex;
 flex-direction: column;
 align-items: center;
-font-family: 'Calibre-Regular',sans-serif;
+font-family: 'Abel', sans-serif;
 font-weight: 100;
 ${'' /* font-family: 'Libre Baskerville', serif; */}
 
@@ -35,7 +35,7 @@ ${'' /* font-family: 'Libre Baskerville', serif; */}
 `
 const HelloTitle = styled.h2`
 color: #9e9e9e;
-font-family: monospace;
+font-family: 'Abel', sans-serif;
 font-size: 13px;
 letter-spacing: 2px;
 
@@ -61,7 +61,7 @@ export default function StyledWelcome() {
 
     return (
     <Welcome className="welcome">
-    {/* <Navbar /> */}
+    <Navbar />
         <Test><Particles className="particles" height='100vh' style={{height: '80vh'}} params={particlesConfig} /></Test>
             <Typist avgTypingDelay={60}>
         <Title>

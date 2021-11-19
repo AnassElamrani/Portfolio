@@ -19,7 +19,7 @@ export default function Home() {
             {/* <div onClick={triggerAnimation} ref={square} style={{width:'50px', height:"50px", backgroundColor:"green"}}>gsap</div> */}
         {/* <div> */}
             <StyledWelcome />
-            <StyledAbout />
+            <StyledAbout id="about" />
         </div>
         // </div>
     )

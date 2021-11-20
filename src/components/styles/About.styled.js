@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
-const StyledAbout = styled.div`
+export const StyledAbout = styled.div`
 height: 100vh;
 background-color: black;
 color: white;
+// border: 1px solid white;
 display: flex;
-gap: 10px;
-padding: 70px;
-border: 1px solid white;
+align-items: center;
+font-family: 'Abel', sans-serif;
 `
 
-export default StyledAbout;
+export const Container = styled.div`
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 80%;
+height: 80%;
+margin: 0 auto;
+` 

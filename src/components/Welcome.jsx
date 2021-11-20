@@ -1,7 +1,7 @@
 import Welcome from "./styles/Welcome.styled";
 import Particles from "react-particles-js";
 import particlesConfig from "../config/particlesConfig";
-import React, {useEffect} from "react"
+import React, {useEffect, useRef } from "react"
 import styled from 'styled-components'
 import Typist from "react-typist";
 import ScrollDownIndicator from "./ScrollDownIndicator";
@@ -56,21 +56,22 @@ collor: white;
 export default function StyledWelcome() {
 
     useEffect(() => {
-        console.log('x')
+        // window.addEventListener('scroll', (e) => {
+        // }, [scrollDownRef])
     })
 
     return (
-    <Welcome className="welcome">
+        <Welcome className="welcome">
     <Navbar />
         <Test><Particles className="particles" height='90vh' style={{height: '80vh'}} params={particlesConfig} /></Test>
             <Typist avgTypingDelay={60}>
         <Title>
-            <HelloTitle>HELLO THERE&#128075;, I'M</HelloTitle>
+            <HelloTitle >HELLO THERE&#128075;, I'M</HelloTitle>
             <h1>Anass Elamrani</h1>
             <h1 style={{color : '#09f755'}}><span style={{color:'#9e9e9e'}}>&lt;</span> I am a Full Stack Developer <span style={{color:'#9e9e9e'}}>/&gt; </span></h1>
         </Title>
         </Typist>
-        <ScrollDownIndicator />
+        <ScrollDownIndicator/>
     </Welcome>        
     )
 }

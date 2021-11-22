@@ -24,7 +24,6 @@ export default function ScrollDownIndicator() {
 
   return (
     <StyledScrollIndicator ref={scrollRef} >
-              <button onClick={removeEvent}>Test</button>
       <div id="container">
         <div id="borders">
           <div id="dot"></div>

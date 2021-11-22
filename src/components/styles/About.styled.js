@@ -4,7 +4,7 @@ export const StyledAbout = styled.div`
 height: 100vh;
 background-color: black;
 color: white;
-// border: 1px solid white;
+border: 1px solid white;
 display: flex;
 align-items: center;
 font-family: 'Abel', sans-serif;
@@ -12,7 +12,6 @@ font-family: 'Abel', sans-serif;
 
 export const Container = styled.div`
 display: flex;
-flex-direction: column;
 gap: 10px;
 width: 80%;
 height: 80%;

@@ -18,6 +18,7 @@ export const P = styled.div`
 background-color: #212022;
 height: 100%;
 padding: 5px 0 0 18px;
+transition: border .3s ease;
 `
 
 export const Name = styled.h4`

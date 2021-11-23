@@ -1,0 +1,12 @@
+.active > div {
+    background-color: #0af755;
+}
+
+.active > p {
+    color: #0af755;
+    font-size: 22px; 
+}
+
+.actived {
+    border-left: #0af755 1px solid;
+}

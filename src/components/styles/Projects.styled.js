@@ -6,7 +6,7 @@ width: 100%;
 // border: 1px gray solid;
 `
 
-export const StyledSkills = styled.h4`
+export const StyledProjects = styled.h4`
 // border: 1px solid white;
 height: 90%;
 margin: 15% 0 0 0;

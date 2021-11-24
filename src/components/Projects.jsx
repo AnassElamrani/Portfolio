@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Container, StyledSkills, P, Name, Summary } from "./styles/Skills.styled"
+import { Container, StyledProjects, P, Name, Summary } from "./styles/Projects.styled"
 
-const Projects =
+const projects =
     [
         {
             title: 'Matcha',
@@ -23,7 +23,7 @@ const Projects =
 
 
 
-export default function Skills() {
+export default function Projects() {
 
     const [active, setActive] = useState();
 
@@ -33,10 +33,10 @@ export default function Skills() {
     }
 
     return (
-        <Container id="skills">
-            <StyledSkills>
+        <Container id="Projects">
+            <StyledProjects>
                 {
-                    Projects.map((Project, index) => {
+                    projects.map((Project, index) => {
                         console.log(Project.title)
                         return (
                             <P
@@ -56,7 +56,7 @@ export default function Skills() {
                         )
                     })
                 }
-            </StyledSkills>
+            </StyledProjects>
         </Container>
     )
 }

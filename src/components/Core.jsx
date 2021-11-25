@@ -13,11 +13,11 @@ export default function Core() {
 
     return (
         <StyledCore id="core">
-            <Big>
+            <Big id="big">
                 {
                     (dockNav === 'about') ? <About /> : (dockNav === 'projects') ? <Projects /> : ''
                 }
-                <DockMenu />
+                <DockMenu dockNav={dockNav} switchDockNav={switchDockNav} />
             </Big>
         </StyledCore>
     )

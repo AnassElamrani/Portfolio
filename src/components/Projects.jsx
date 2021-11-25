@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Container, StyledProjects, P, Name, Summary } from "./styles/Projects.styled"
+import { Container, StyledProjects, P, Name, Summary, StyledTitle, LeftDiv, AboutProjects } from "./styles/Projects.styled"
 
 const projects =
     [
@@ -34,6 +34,14 @@ export default function Projects() {
 
     return (
         <Container id="Projects">
+            <LeftDiv>
+                <StyledTitle>
+                    Projects
+                </StyledTitle>
+                <AboutProjects>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam laboriosam est iste nobis ea quibusdam, sed illo velit fugiat magni sapiente exercitationem fugit aliquid vitae nemo eos nulla a.
+                </AboutProjects>
+            </LeftDiv>
             <StyledProjects>
                 {
                     projects.map((Project, index) => {

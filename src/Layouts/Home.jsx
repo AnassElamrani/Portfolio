@@ -1,11 +1,11 @@
 import StyledWelcome from "../components/Welcome"
-import About from "../components/About";
+import Core from "../components/Core";
 
 export default function Home() {
     return (
         <div>
             <StyledWelcome />
-            <About id="about"/>
+            <Core id="core"/>
         </div>
     )
 }

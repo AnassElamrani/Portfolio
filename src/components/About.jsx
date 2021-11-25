@@ -1,24 +1,13 @@
-import React , {useState} from "react";
-import { Container, StyledAbout } from "./styles/About.styled";
+import React from 'react';
 import Who from "./Who";
-import Projects from "./Projects";
+import myPic from "../assets/images/mypic.jpeg";
+import {Container, ImgDiv} from "./styles/StyledAbout.styled";
 
 export default function About() {
-const [dockNav, setDockNav] = useState('projects');
-
-const switchDockNav = (to) => {
-    setDockNav(to);
-}
-
     return (
-        <StyledAbout id="about">
-            <Container>
-                <Who  dockNav={dockNav} switchDockNav={switchDockNav} />
-                {
-
-                        dockNav === 'Projects' ? <Projects /> : ''
-                }
-            </Container>
-        </StyledAbout>
+        <Container id="about">
+            <Who />
+            <ImgDiv><img src={myPic} /></ImgDiv>
+        </Container>
     )
 }

@@ -1,5 +1,6 @@
-import { StyledDockMenu, Element, Line } from "./styles/StyledWho.styled"
-const dock = ["projects", "skills", "contact"];
+import React, {useState} from 'react';
+import { StyledDockMenu, Element, Line } from "./styles/StyledDockMenu.styled"
+const dock = ["about", "projects", "skills", "contact"];
 
 export const DockMenu = (props) => {
     const {dockNav, changeDockNav} = props;

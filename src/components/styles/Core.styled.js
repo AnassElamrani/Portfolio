@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAbout = styled.div`
+export const StyledCore = styled.div`
 height: 100vh;
 background-color: black;
 color: white;
@@ -10,10 +10,13 @@ align-items: center;
 font-family: 'Abel', sans-serif;
 `
 
-export const Container = styled.div`
-display: flex;
-gap: 10px;
+
+
+export const Big = styled.div`
+display : flex;
+flex-direction: column;
 width: 80%;
 height: 80%;
 margin: 0 auto;
 `
+

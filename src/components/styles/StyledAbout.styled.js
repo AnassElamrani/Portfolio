@@ -14,5 +14,6 @@ flex-direction: column;
     & > img {
         border-radius: 50%;
         width: 23vw;
+        max-width: 300px;
     }
 `

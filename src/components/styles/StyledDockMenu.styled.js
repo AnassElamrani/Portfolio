@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledDockMenu = styled.div`
+width: 50%;
 display: flex;
 flex-direction: column;
 color: white;

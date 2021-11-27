@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledCore, Big } from "./styles/Core.styled";
 import Projects from "./Projects";
 import { DockMenu } from "./DockMenu";
@@ -7,6 +7,15 @@ import Skills from "./Skills";
 
 export default function Core() {
     const [dockNav, setDockNav] = useState('about');
+    const [width, setWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
+    })
 
     const switchDockNav = (to) => {
         setDockNav(to);
@@ -16,7 +25,13 @@ export default function Core() {
         <StyledCore id="core">
             <Big id="big">
                 {
-                    (dockNav === 'about') ? <About /> : (dockNav === 'skills & projects') ? <Projects /> : <Skills /> 
+                    width > 700 ?
+                        (dockNav === 'about') ? <About /> : <Projects />
+                        :
+                        <>
+                            <About />
+                            <Projects />
+                        </>
                 }
                 <DockMenu dockNav={dockNav} switchDockNav={switchDockNav} />
             </Big>

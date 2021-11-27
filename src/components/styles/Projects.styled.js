@@ -32,6 +32,9 @@ font-size: 16px;
 export const  StyledTitle = styled.h4`
 font-size: 50px;
 color: white;
+@media only screen and (max-width: 700px) {
+    font-size: 20px;
+  }
 `
 
 export const LeftDiv = styled.div`

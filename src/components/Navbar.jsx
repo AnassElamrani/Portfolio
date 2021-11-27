@@ -18,11 +18,11 @@ export default function Navbar() {
         <StyledNavbar>
             <Logo>AE</Logo>
             <RightGroup>
-            <div className="about" onClick={scrollIntoView}>About</div>
-            <div className="projects" onClick={scrollIntoView}>Projects</div>
-            <GetInTouchButton className="contact" onClick={scrollIntoView}>
+            <div className="big" onClick={scrollIntoView}>About</div>
+            {/* <div className="projects" onClick={scrollIntoView}>Projects</div> */}
+            {/* <GetInTouchButton className="contact" onClick={scrollIntoView}>
                 Get in touch
-            </GetInTouchButton>
+            </GetInTouchButton> */}
             </RightGroup>
         </StyledNavbar>
     )

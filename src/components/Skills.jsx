@@ -1,14 +1,15 @@
 
 import React, { useEffect } from "react";
-import { StyledSkills } from "./styles/StyledSkills.styled";
+import { StyledSkills, SkillsTitle } from "./styles/StyledSkills.styled";
 import TagCloud from "TagCloud"
 
 const myTags = [
     'JavaScript', 'CSS', 'HTML',
-    'C', 'C++', 'React',
-    'Python', 'Java', 'git',
-    'django', 'Node.js', 'OpenCV',
-    'GCP', 'MySQL', 'jQuery',
+    'C', 'redux', 'ReactJs',
+    'PHP',
+    'mongoDb', 'Vuejs', 'git',
+    'Docker', 'Node.js', 'redis',
+    'websocket', 'MySQL', 'jQuery',
 ];
 
 export default function Skills() {
@@ -21,8 +22,8 @@ export default function Skills() {
           
             // animation speed
             // slow, normal, fast
-            maxSpeed: 'normal',
-            initSpeed: 'normal',
+            maxSpeed: 'slow',
+            initSpeed: 'slow',
           
             // 0 = top
             // 90 = left
@@ -34,11 +35,12 @@ export default function Skills() {
             
           });
           
-          //To change the color of text randomly
-          document.querySelector('.content').style.color = '#09f755';
+          document.querySelector('.content').style.color = 'white';
+
     }, [])
     return (
         <StyledSkills>
+            {/* <SkillsTitle>- Skills</SkillsTitle> */}
             <span class="content"></span>
         </StyledSkills>
     )

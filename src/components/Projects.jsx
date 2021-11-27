@@ -8,6 +8,7 @@ import javascriptLogo from "../assets/icons/javascript.png";
 import mysqlLogo from "../assets/icons/mysql.png";
 import phpLogo from "../assets/icons/php.png";
 import vuejsLogo from "../assets/icons/vuejs.png";
+import Skills from "./Skills";
 
 const projects =
     [
@@ -52,12 +53,13 @@ export default function Projects() {
         <Container id="Projects">
             <LeftDiv>
                 <StyledTitle>
-                    PROJECTS
+                    SKILLS - PROJECTS
                 </StyledTitle>
-                <AboutProjects>
+                {/* <AboutProjects>
                     All along my journey of coding i have been working and still on reach and interesting projects with different stacks , mainly with JavaScript and it's frameworks and libraries.
                     with a team or solo i enjoy building web applications and enhance them.
-                </AboutProjects>
+                </AboutProjects> */}
+                <Skills />
             </LeftDiv>
             <StyledProjects>
                 {

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { StyledDockMenu, Element, Line } from "./styles/StyledDockMenu.styled"
-const dock = ["about", "projects", "skills", "contact"];
+const dock = ["about", "skills & projects"];
 
 export const DockMenu = (props) => {
     const {dockNav, switchDockNav} = props;

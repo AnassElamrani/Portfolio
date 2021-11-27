@@ -9,7 +9,7 @@ const StyledScrollIndicator = styled.div`
     left: 50%;
     transform: translate(-50%, 0);
     animation: trans 2s;
-    animation-delay: 5s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
 }

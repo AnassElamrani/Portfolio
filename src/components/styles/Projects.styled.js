@@ -26,11 +26,11 @@ color: white;
 `
 export const Summary = styled.p`
 color: #A5A5A7;
-font-size: 1.8vh;
+font-size: 16px;
 `
 
 export const  StyledTitle = styled.h4`
-font-size: 60px;
+font-size: 50px;
 color: white;
 `
 

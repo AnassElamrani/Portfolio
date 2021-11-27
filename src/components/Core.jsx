@@ -16,7 +16,7 @@ export default function Core() {
         <StyledCore id="core">
             <Big id="big">
                 {
-                    (dockNav === 'about') ? <About /> : (dockNav === 'projects') ? <Projects /> : <Skills /> 
+                    (dockNav === 'about') ? <About /> : (dockNav === 'skills & projects') ? <Projects /> : <Skills /> 
                 }
                 <DockMenu dockNav={dockNav} switchDockNav={switchDockNav} />
             </Big>

@@ -15,7 +15,7 @@ font-size: 60px;
 
 export const Paragraph = styled.p`
 color: gray;
-font-size: 1.8vh;
+font-size: 20px;
 width: 70%;
 margin-bottom: 4vh;
 `

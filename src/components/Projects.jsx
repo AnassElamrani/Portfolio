@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Container, StyledProjects, P, Name, Summary, StyledTitle, LeftDiv, AboutProjects, LogosContainer } from "./styles/Projects.styled"
+import { Container, StyledProjects, P, GithubLogo, Name, Summary, StyledTitle, LeftDiv, SummaryText,AboutProjects, LogosContainer } from "./styles/Projects.styled"
 import htmlLogo from "../assets/icons/html.png";
 import mongodbLogo from "../assets/icons/mongodb.png";
 import nodejsLogo from "../assets/icons/node-js.png";
@@ -9,6 +9,7 @@ import mysqlLogo from "../assets/icons/mysql.png";
 import phpLogo from "../assets/icons/php.png";
 import vuejsLogo from "../assets/icons/vuejs.png";
 import Skills from "./Skills";
+import githubLogo from "../assets/icons/githubLogo.png";
 
 const projects =
     [
@@ -43,12 +44,17 @@ const projects =
 export default function Projects() {
 
     const [active, setActive] = useState();
-
+    const linkRefs = useRef([]);
+    
+    
     const activate = (e) => {
         console.log(e.target.id)
         setActive(e.target.id);
     }
 
+    const triggerLinkClick = (i) => {
+        linkRefs.current[i].click();
+    }
     return (
         <Container id="Projects">
             <LeftDiv>
@@ -59,20 +65,33 @@ export default function Projects() {
                     All along my journey of coding i have been working and still on reach and interesting projects with different stacks , mainly with JavaScript and it's frameworks and libraries.
                     with a team or solo i enjoy building web applications and enhance them.
                 </AboutProjects> */}
+                <SummaryText>
+                    During my cursus in 1337, i have been working in really intersting projects that made me learn deeply many technologies when and how to use them.
+                </SummaryText>
                 <Skills />
             </LeftDiv>
             <StyledProjects>
                 {
                     projects.map((Project, index) => {
-                        console.log(Project.title)
+                        
                         return (
                             <P
+                                key={index}
                                 className={
                                     (index == active) ? 'actived' : ''
                                 }
+                                onClick={() => triggerLinkClick(index)}
                                 id={index}
                                 onMouseEnter={(e) => { activate(e) }}
                                 onMouseLeave={() => { setActive(null) }}>
+                                <a href={Project.github} 
+                                target="_blank"
+                                ref={(el) =>  linkRefs.current[index] = el 
+                                }
+                                ></a>
+                                <GithubLogo img src={githubLogo}>
+                                    {/* < alt="githubLogo" /> */}
+                                </GithubLogo>
                                 <Name>
                                     {Project.title}
                                 </Name>

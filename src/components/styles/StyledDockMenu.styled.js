@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledDockMenu = styled.div`
+position: absolute;
+top: 85%;
 width: 50%;
 display: flex;
 flex-direction: column;

@@ -1,7 +1,8 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { StyledSkills, SkillsTitle } from "./styles/StyledSkills.styled";
-import TagCloud from "TagCloud"
+import TagCloud from "TagCloud";
+import { MobileContext } from "./MobileContext";
 
 const myTags = [
     'JavaScript', 'CSS', 'HTML',
@@ -13,12 +14,13 @@ const myTags = [
 ];
 
 export default function Skills() {
+    const isMobile = useContext(MobileContext);
 
     useEffect(() => {
         var tagCloud= TagCloud('.content', myTags,{
 
             // radius in px
-            radius: 220,
+            radius: isMobile ? 120 : 200,
           
             // animation speed
             // slow, normal, fast

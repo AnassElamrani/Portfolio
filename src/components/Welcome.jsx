@@ -61,9 +61,9 @@ export default function StyledWelcome() {
     })
 
     return (
-        <Welcome className="welcome">
+        <Welcome className="welcome" style={{position:'relative'}}>
     <Navbar />
-        <Test><Particles className="particles" height='90vh' style={{height: '80vh'}} params={particlesConfig} /></Test>
+        <Test ><Particles className="particles" height='90vh' style={{height: '80vh'}} params={particlesConfig} /></Test>
             <Typist avgTypingDelay={60}>
         <Title>
             <HelloTitle >HELLO THERE&#128075;, I'M</HelloTitle>

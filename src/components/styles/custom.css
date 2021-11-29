@@ -10,3 +10,12 @@
 .actived {
     border-left: #0af755 1px solid;
 }
+
+.actived > img {
+    border-left: white 1px solid;
+    background-color: #3a3a3a;
+}
+
+body {
+position: relative;
+}

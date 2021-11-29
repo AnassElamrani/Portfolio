@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import React, {useState, useEffect} from 'react';
 import { StyledDockMenu, Element, Line } from "./styles/StyledDockMenu.styled"
 const dock = ["about", "skills & projects"];
@@ -11,11 +12,20 @@ export const DockMenu = (props) => {
     }
 
     useEffect(() => {
-     console.log('**', dockNav)
-    })
+        console.log('**', dockNav)
+        gsap.fromTo(".dockMenu", {
+            opacity: 0,
+            x: -400,
+            duration: 1
+        }, {
+            opacity: 1,
+            x : 1,
+            duration: 1
+        })
+    }, [])
     
     return (
-        <StyledDockMenu>
+        <StyledDockMenu className="dockMenu">
         {
             dock.map((el, index) => {
                 return (
@@ -23,7 +33,10 @@ export const DockMenu = (props) => {
                         className={
                             (dockNav === el || index == magEl) ? 'active': ''
                         }
-                        onClick={() => {switchDockNav(el)}}
+                        onClick={(e) => {
+                            console.log('target', e.target);
+
+                            switchDockNav(el)}}
                         key={index}
                         id={index}
                         onMouseEnter={(e) => {magnify(e)}}

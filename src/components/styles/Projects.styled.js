@@ -87,4 +87,5 @@ position: absolute;
 right: 0;
 bottom: 0;
 width: 30px;
+border-radius: 50%;
 `

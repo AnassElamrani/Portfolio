@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, StyledProjects, P, GithubLogo, Name, Summary, StyledTitle, LeftDiv, SummaryText,AboutProjects, LogosContainer } from "./styles/Projects.styled"
 import htmlLogo from "../assets/icons/html.png";
 import mongodbLogo from "../assets/icons/mongodb.png";
@@ -10,6 +10,8 @@ import phpLogo from "../assets/icons/php.png";
 import vuejsLogo from "../assets/icons/vuejs.png";
 import Skills from "./Skills";
 import githubLogo from "../assets/icons/githubLogo.png";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const projects =
     [
@@ -45,8 +47,25 @@ export default function Projects() {
 
     const [active, setActive] = useState();
     const linkRefs = useRef([]);
-    
-    
+
+    useEffect(() => {
+        console.log('Projects')
+       
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from("#Projects", 
+            {
+                scrollTrigger: {
+                    trigger: '.about',
+                    toggleActions: "restart none none none"
+                },
+            
+            opacity: 0,
+            x: -100,
+            duration: 1
+        });
+     
+    }, [])
+
     const activate = (e) => {
         console.log(e.target.id)
         setActive(e.target.id);

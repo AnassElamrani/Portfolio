@@ -36,6 +36,9 @@ color: white;
 export const Summary = styled.p`
 color: #A5A5A7;
 font-size: 16px;
+@media only screen and (max-width: 700px) {
+  font-size: 14px;
+}
 `
 
 export const  StyledTitle = styled.h4`

@@ -55,7 +55,7 @@ export default function Projects() {
         gsap.from("#Projects", 
             {
                 scrollTrigger: {
-                    trigger: '.about',
+                    trigger: '#projects',
                     toggleActions: "restart none none none"
                 },
             

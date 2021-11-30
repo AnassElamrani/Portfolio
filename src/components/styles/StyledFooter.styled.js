@@ -12,9 +12,8 @@ justify-content: end;
 
 export const Container = styled.div`
 height: 70%;
-background-color: black;
-background-color: end;
-border-top: 1px solid gray;
+border-top: 1px solid #212022;
+background-color: #141414;
 display: flex;
 flex-direction: column;
 gap: 80px;
@@ -30,23 +29,32 @@ display: flex;
 // border: 1px green solid;
 align-items: center;
 justify-content: space-between;
-
+@media only screen and (max-width:700px){
+    flex-direction : column;
+  }
 `
 export const BoldText = styled.h2`
 color: #e1e0e0;
 font-family: 'Abril Fatface';
+cursor: default;
 `
 
 export const ContactButton = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-border: #e1e0e0 1px solid;
+border: #3a3a3a 1px solid;
 border-radius: 10px;
 color: #e1e0e0;
 height: fit-content;
-padding: 0 20px;
+padding: 0 10px;
 font-family: 'Abel', sans-serif;
+cursor: default;
+transition: ease 0.5s;
+&:hover {
+    // color:#0af755;
+    border: 1px solid white;
+}
 `
 
 export const BottomDiv = styled.div`
@@ -72,6 +80,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
+& > a {
+    display: hidden;
+}
 `
 export const Icon = styled.img`
 width: 30px;

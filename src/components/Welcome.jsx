@@ -25,32 +25,32 @@ font-family: 'Abel', sans-serif;
 font-weight: 100;
 ${'' /* font-family: 'Libre Baskerville', serif; */}
 
-@media only screen and (max-width: 600px)
-{
-    ${'' /* font-size: 4vw; */}
-}
-&:hover  {
-    ${'' /* color:red; */}
+& > h1 {
+    font-size: 30px;
+    @media only screen and (max-width: 600px)
+    {
+        font-size: 26px;
+    }
 }
 `
-const HelloTitle = styled.h2`
+const HelloTitle = styled.h3`
 color: #9e9e9e;
 font-family: 'Abel', sans-serif;
 font-size: 13px;
 letter-spacing: 2px;
 
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 700px)
 {
-    ${'' /* font-size: 4vw; */}
+    font-size: 11px;
 }
 `
-
-const ContactMe = styled.div`
-border: 1px solid white;
-border-radius : 5px;
-width: 40px;
-height: 15px;
-collor: white;
+const DevText = styled.h3`
+color : #09f755;
+font-size: 24px;
+@media only screen and (max-width: 700px)
+{
+    font-size: 14px;
+}
 `
 
 export default function StyledWelcome() {
@@ -66,9 +66,9 @@ export default function StyledWelcome() {
         <Test ><Particles className="particles" height='90vh' style={{height: '80vh'}} params={particlesConfig} /></Test>
             <Typist avgTypingDelay={60}>
         <Title>
-            <HelloTitle >HELLO THERE&#128075;, I'M</HelloTitle>
+            <HelloTitle>HELLO THERE&#128075;, I'M</HelloTitle>
             <h1>Anass Elamrani</h1>
-            <h1 style={{color : '#09f755'}}><span style={{color:'#9e9e9e'}}>&lt;</span> I am a Full Stack Developer <span style={{color:'#9e9e9e'}}>/&gt; </span></h1>
+            <DevText><span style={{color:'#9e9e9e'}}>&lt;</span> I am a Full Stack Developer <span style={{color:'#9e9e9e'}}>/&gt; </span></DevText>
         </Title>
         </Typist>
         <ScrollDownIndicator/>

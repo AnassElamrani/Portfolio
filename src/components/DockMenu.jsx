@@ -1,5 +1,4 @@
-import gsap from "gsap";
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { StyledDockMenu, Element, Line } from "./styles/StyledDockMenu.styled"
 const dock = ["about", "skills & projects"];
 
@@ -10,19 +9,6 @@ export const DockMenu = (props) => {
     const magnify = (e) => {
         setMagEl(e.target.id);
     }
-
-    useEffect(() => {
-        console.log('**', dockNav)
-        gsap.fromTo(".dockMenu", {
-            opacity: 0,
-            x: -400,
-            duration: 1
-        }, {
-            opacity: 1,
-            x : 1,
-            duration: 1
-        })
-    }, [])
     
     return (
         <StyledDockMenu className="dockMenu">

@@ -11,6 +11,7 @@ color: white;
     display:none;
     color: #0af755;
 }
+cursor: default;
 `
 
 export const Element = styled.div`

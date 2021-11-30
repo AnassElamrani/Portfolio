@@ -5,20 +5,23 @@ export const Cursor = () => {
     const cursorRef = useRef();
 
     const cursorStyle = {
-        width: '20px',
-        height: '20px',
+        width: '10px',
+        height: '10px',
         borderRadius: '50%',
-        border: '2px solid cyan',
+        border: '2px solid #09f755',
+        // backgroundColor: '#09f755',
         position: 'absolute',
         zIndex: '9999',
+        transition: 'ease',
+        // transform: 'translate3d(-50%, -50%)',
     }
     const updateCursorPosition = (x, y) => {
+        cursorRef.current.style.left = cursorPosition.x ? cursorPosition.x+'px' : '0px'; 
+        cursorRef.current.style.top = cursorPosition.y ? cursorPosition.y+'px' : '0px';
         setCursorPosition({x: x, y: y});
     }
     useEffect(() => {
-        cursorRef.current.style.left = cursorPosition.x ? cursorPosition.x+'px' : '0px'; 
-        cursorRef.current.style.top = cursorPosition.y ? cursorPosition.y+'px' : '0px';
-        // console.log('position', position)
+        console.log('position', cursorPosition)
         const mouseEvent = (e) => {
             console.log('mouse-position', e.offsetX, ' - ', e.offsetY)
             updateCursorPosition(e.offsetX, e.offsetY);
@@ -30,7 +33,6 @@ export const Cursor = () => {
     })
     return (
         <div id="cursor" ref={cursorRef} style={cursorStyle}>
-            ss
         </div>
     )
 }

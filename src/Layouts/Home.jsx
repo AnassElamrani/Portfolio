@@ -3,6 +3,7 @@ import StyledWelcome from "../components/Welcome"
 import Core from "../components/Core";
 import {MobileContext} from "../components/MobileContext";
 import {Cursor} from "../utils/Cursor";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
@@ -23,9 +24,11 @@ export default function Home() {
     return (
         <MobileContext.Provider value={isMobile}>
         <div id="parent">
-        <Cursor />
             <StyledWelcome />
-            <Core id="core"/>
+            <Core id="core">
+                {/* <Cursor /> */}
+            </Core>
+            <Footer />
         </div>
         </MobileContext.Provider>
     )

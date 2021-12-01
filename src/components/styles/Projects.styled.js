@@ -25,7 +25,7 @@ border-radius: 4px;
 export const P = styled.div`
 background-color: #212022;
 height: 100%;
-padding: 5px 0 10px 18px;
+padding: 5px 18px 10px 18px;
 transition: border .3s ease;
 position: relative;
 `
@@ -75,9 +75,10 @@ gap: 4px;
 `
 
 export const SummaryText = styled.p`
-font-size: 16px;
+font-size: 20px;
 color: #9e9e9e;
 width: 80%;
+margin: 0px;
 @media only screen and (max-width: 700px) {
   margin-left: auto;
   margin-right: auto;
@@ -91,4 +92,19 @@ right: 0;
 bottom: 0;
 width: 30px;
 border-radius: 50%;
+`
+
+export const TechText = styled.div`
+display: flex;
+flex-wrap: wrap;
+font-size: 15px;
+color: #7ea175;
+margin: 6px 0;
+& > p {
+  margin: 1px 5px 0px 0px;
+}
+@media only screen and (max-width: 700px)
+{
+    font-size: 14px;
+}
 `

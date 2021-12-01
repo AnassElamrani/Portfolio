@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Container, StyledProjects, P, GithubLogo, Name, Summary, StyledTitle, LeftDiv, SummaryText,AboutProjects, LogosContainer } from "./styles/Projects.styled"
+import { Container, StyledProjects, P, GithubLogo, Name, Summary, StyledTitle, LeftDiv, SummaryText,AboutProjects, LogosContainer, TechText } from "./styles/Projects.styled"
 import htmlLogo from "../assets/icons/html.png";
 import mongodbLogo from "../assets/icons/mongodb.png";
 import nodejsLogo from "../assets/icons/node-js.png";
@@ -8,6 +8,8 @@ import javascriptLogo from "../assets/icons/javascript.png";
 import mysqlLogo from "../assets/icons/mysql.png";
 import phpLogo from "../assets/icons/php.png";
 import vuejsLogo from "../assets/icons/vuejs.png";
+import djangoLogo from "../assets/icons/django.png";
+import sqliteLogo from "../assets/icons/sqlite.png";
 import Skills from "./Skills";
 import githubLogo from "../assets/icons/githubLogo.png";
 import gsap from "gsap";
@@ -19,25 +21,29 @@ const projects =
             title: 'Matcha',
             description: 'A dating and geosocial networking web application to search for people to match with and chat with them.',
             github: 'https://github.com/AnassElamrani/Matcha-Tinder-like-App',
-            stack: [nodejsLogo, reactjsLogo, mysqlLogo]
+            stack: [nodejsLogo, reactjsLogo, mysqlLogo],
+            tech: ['ReactJs.','material-ui.', 'NodeJs.','expressJs.','mySql.','socket.io.', 'multer.', 'jwt.', 'oAuth.', 'passportJs.']
         },
         {
             title: 'Hypertube',
             description: 'A streaming web application to search for your favorite movie to watch.',
             github: 'https://github.com/AnassElamrani/Hypertube',
-            stack: [nodejsLogo, vuejsLogo, mongodbLogo]
+            stack: [nodejsLogo, vuejsLogo, mongodbLogo],
+            tech: ['Vuejs.', 'NodeJs.','expressJs.','mongodb.','nuxt.', 'multer.', 'jwt.', 'oAuth.']
         },
         {
             title: 'Camagru',
             description: 'Instgram-like web application where you can take pictures edit them and get likes and comments from others.',
             github: 'https://github.com/AnassElamrani/Camagru-App',
-            stack: [phpLogo, javascriptLogo, htmlLogo]
+            stack: [phpLogo, javascriptLogo, htmlLogo],
+            tech: ['PHP.','bootstrap.', 'webRTC.','mySql.']
         },
         {
             title: 'Audit Web App',
-            description: 'corrupti ipsum! Natus exercitationem ipsam quaerat corporis vitae distinctio.',
+            description: 'Intership project, worked on the front-end to build an audit web application that run scans on machines to check for system errors and vulnerabilities and visualize the result in form of graphes and tables.',
             github: 'https://github.com/AnassElamrani/dataprotect',
-            stack: [reactjsLogo]
+            stack: [reactjsLogo, djangoLogo, sqliteLogo],
+            tech: ['ReactJs.','material-ui.', 'chartJs.','sqlite.','mongodb.','jwt.', 'axios.']
         }
     ]
 
@@ -80,12 +86,8 @@ export default function Projects() {
                 <StyledTitle>
                     SKILLS - PROJECTS
                 </StyledTitle>
-                {/* <AboutProjects>
-                    All along my journey of coding i have been working and still on reach and interesting projects with different stacks , mainly with JavaScript and it's frameworks and libraries.
-                    with a team or solo i enjoy building web applications and enhance them.
-                </AboutProjects> */}
                 <SummaryText>
-                    During my cursus in 1337, i have been working in really intersting projects that made me learn deeply many technologies when and how to use them.
+                    In more than 4 years of coding, i have been working on some really intersting web projects that allowed me to learn deeply different stacks mainly around Javascript, when and how to use them.
                 </SummaryText>
                 <Skills />
             </LeftDiv>
@@ -125,8 +127,18 @@ export default function Projects() {
                                                 )
                                                 
                                             })
+                                }
+                                    </LogosContainer>
+                                    <TechText>
+                                {
+                                    Project.tech.map((tech) => {
+                                        return (
+                                                <p>{tech}</p>
+                                                )
+                                                
+                                            })
                                         }
-                                </LogosContainer>
+                                        </TechText>
                             </P>
                         )
                     })
